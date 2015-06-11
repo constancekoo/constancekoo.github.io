@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<title>Constance Koo &middot; Contact</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<script type="text/javascript">
+if (location.host == 'constance.github.io')
+  location.replace(location.href.replace('constance.github.io', 'constancekoo.com'));
+</script>
+<link rel="canonical" href="http://constancekoo.com/contact/"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/favicon-64.png" rel="icon" type="image/png"/>
+<link href="/favicon-180.png" rel="apple-touch-icon-precomposed"/>
+
+<meta name="msapplication-square150x150logo" content="/favicon-180.png"/>
+<meta name="msapplication-TileImage" content="/favicon-180.png">
+<meta name="msapplication-TileColor" content="#ffffff"/>
+<meta name="application-name" content="Constance Koo" />
+
+<link href="/resources/typicons.min.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/foundation.min.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/clear.min.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/style.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/slick/slick.css" rel="stylesheet" type="text/css"/>
+
+<script src="/resources/modernizr.js"></script>
+<script src="/resources/handlebars.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body id="page-contact">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=115156425222945&version=v2.0";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<header id="top">
+		<nav>
+			<ul class="desktop main left">
+				<li><a href="/"><img src="/images/logo.png" alt=""/></a></li>
+				<li><h1><a href="/">Constance Koo</a></h1></li>
+			</ul>
+			<ul class="desktop main right">
+				<li><a href="/">Home</a></li>
+				<li><a href="/biography/">Biography</a></li>
+				<li><a href="/events/">Events</a></li>
+				<li><a href="/lessons/">Lessons</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+			<div class="mobile">
+				<ul class="main">
+					<li><a href="n"><img src="/images/logo.png" alt=""/></a></li>
+					<li><h1><a href="">Constance Koo</a></h1></li>
+				</ul>
+				<div id="top-nav">
+					<a class="selector" href="#">
+						<div class="wrapper">
+							<span class="bar-icon"></span>
+							<span class="bar-icon"></span>
+							<span class="bar-icon"></span>
+						</div>
+					</a>
+					<div class="pop">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/biography/">Biography</a></li>
+							<li><a href="/events/">Events</a></li>
+							<li><a href="/lessons/">Lessons</a></li>
+							<li><a href="/contact/">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div id="background">
+		<img src="/images/contact.jpg" alt=""/>
+	</div>
+
+	<div id="content">
+		<div id="text">
+			<div id="press">
+				<h2>Publicity</h2>
+				<em><small>Photos by <a href="http://racheldetra.blogspot.com">Rachel Detra</a> and <a href="http://mauriceramirez.com">Maurice Ramirez</a>.</small></em>
+				<ul>
+					<li>
+						<img src="/images/publicity-01-sq.jpg" alt=""/>
+						<a class="typcn typcn-download" href="/images/publicity-01.jpg" download="Publicity_Photo_1.jpg"></a>
+					</li>
+					<li>
+						<img src="/images/publicity-02-sq.jpg" alt=""/>
+						<a class="typcn typcn-download" href="/images/publicity-02.jpg" download="Publicity_Photo_2.jpg"></a>
+					</li>
+					<li>
+						<img src="/images/publicity-03-sq.jpg" alt=""/>
+						<a class="typcn typcn-download" href="/images/publicity-03.jpg" download="Publicity_Photo_3.jpg"></a>
+					</li>
+					<li>
+						<img src="/images/publicity-04-sq.jpg" alt=""/>
+						<a class="typcn typcn-download" href="/images/publicity-04.jpg" download="Publicity_Photo_4.jpg"></a>
+					</li>
+				</ul>
+				<a id="press-kit" href="/press.zip">Download Press Kit</a>
+			</div>
+			<div id="contact">
+				<h2>Contact</h2>
+				<p>Please call <strong>(510) 545-9349</strong>, email <strong>constancekoo@gmail.com</strong>, or submit the form below.</p>
+				<form method="POST" data-abide id="contactform" class="custom" action="http://formspree.io/constancekoo@gmail.com">
+					<ul class="small-block-grid-1 medium-block-grid-2">
+						<li>
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" value="" required pattern="[a-zA-Z]+" placeholder="John Doe" />
+							<small class="error">Nobody's nameless!</small>
+						</li>
+						<li>
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" value="" required placeholder="youremail@yourdomain.com" />
+							<small class="error">Please use a valid email address.</small>
+						</li>
+						<li>
+							<label for="subject">Subject</label>
+							<input type="text" name="_subject" id="subject" value="" required placeholder="Just a general hello!"/>
+							<small class="error">What's your message about?</small>
+						</li>
+					</ul>
+					<ul class="small-block-grid-1">
+						<li>
+							<label for="message">Message</label>
+							<textarea rows="8" name="body" id="message" role="textbox" required></textarea>
+							<small class="error">What were you saying?</small>
+						</li>
+					</ul>
+					<ul class="small-block-grid-1">
+						<li>
+							<input hidden type="text" name="_gotcha" style="display:none"/>
+							<input class="button" type="submit" value="Send Message" id="submitButton">
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<footer id="bottom">
+		<div>Design by <a href="http://gabriellew.ee">Gabrielle Wee</a></div>
+		<div class="fb-like" data-href="https://facebook.com/constancekoo" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+		<div>Constance Koo &copy; 2015</div>
+	</footer>
+	<script src="/resources/scripts.js"></script>
+	<script src="/resources/slick/slick.min.js"></script>
+	<script src="/resources/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+	<script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
+	<script>
+		WebFont.load ({
+			google: {
+				families: ['Alegreya:400,700,400italic,700italic', 'Source Sans Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic']
+			}
+		});
+	</script>
+</body>
+</html>

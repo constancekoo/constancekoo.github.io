@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<title>Constance Koo &middot; Events</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<script type="text/javascript">
+if (location.host == 'constance.github.io')
+  location.replace(location.href.replace('constance.github.io', 'constancekoo.com'));
+</script>
+<link rel="canonical" href="http://constancekoo.com/events/"/>
+
+<link href="/favicon.ico" rel="shortcut icon"/>
+<link href="/favicon-64.png" rel="icon" type="image/png"/>
+<link href="/favicon-180.png" rel="apple-touch-icon-precomposed"/>
+
+<meta name="msapplication-square150x150logo" content="/favicon-180.png"/>
+<meta name="msapplication-TileImage" content="/favicon-180.png">
+<meta name="msapplication-TileColor" content="#ffffff"/>
+<meta name="application-name" content="Constance Koo" />
+
+<link href="/resources/typicons.min.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/foundation.min.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/clear.min.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/style.css" rel="stylesheet" type="text/css"/>
+<link href="/resources/slick/slick.css" rel="stylesheet" type="text/css"/>
+
+<script src="/resources/modernizr.js"></script>
+<script src="/resources/handlebars.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body id="page-events">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=115156425222945&version=v2.0";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<header id="top">
+		<nav>
+			<ul class="desktop main left">
+				<li><a href="/"><img src="/images/logo.png" alt=""/></a></li>
+				<li><h1><a href="/">Constance Koo</a></h1></li>
+			</ul>
+			<ul class="desktop main right">
+				<li><a href="/">Home</a></li>
+				<li><a href="/biography/">Biography</a></li>
+				<li><a href="/events/">Events</a></li>
+				<li><a href="/lessons/">Lessons</a></li>
+				<li><a href="/contact/">Contact</a></li>
+			</ul>
+			<div class="mobile">
+				<ul class="main">
+					<li><a href="n"><img src="/images/logo.png" alt=""/></a></li>
+					<li><h1><a href="">Constance Koo</a></h1></li>
+				</ul>
+				<div id="top-nav">
+					<a class="selector" href="#">
+						<div class="wrapper">
+							<span class="bar-icon"></span>
+							<span class="bar-icon"></span>
+							<span class="bar-icon"></span>
+						</div>
+					</a>
+					<div class="pop">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/biography/">Biography</a></li>
+							<li><a href="/events/">Events</a></li>
+							<li><a href="/lessons/">Lessons</a></li>
+							<li><a href="/contact/">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div id="background">
+		<img src="/images/events.jpg" alt=""/>
+	</div>
+
+	<div id="content">
+		<div id="events-list"></div>
+		<script id="events-template" type="text/x-handlebars-template">
+			{{#event}}
+				<div class="event">
+					<div class="event-inner">
+						<h2><a href="{{link}}">{{name}}</a></h2>
+						<h3>{{feature}}</h3>
+						<ul>
+							<li><strong>Venue:</strong><br/><a href="{{map}}">{{venue}}<br/>{{city}}</a></li>
+							<li><strong>Date:</strong><br/>{{date}}</li>
+						</ul>
+					</div>
+					<h4 class="{{cost}}">
+						<a href="{{tickets}}>">Buy Tickets</a>
+						<span>Free Admission</span>
+					</h4>
+				</div>
+			{{/event}}
+		</script>
+		<script>
+			var source = document.getElementById("events-template").innerHTML;
+			var template = Handlebars.compile(source);
+			var data = {event: [
+				// COPY EVENT
+				{
+					name: "2015 Castleton Music Festival",
+					link: "https://www.castletonfestival.org/",
+					feature: "Under the leadership of Castelton co-founder Dietlande Turban Maazel, the Castleton Festival will hold its seventh season July 2-August 2, 2015 with four weekends of opera, chamber music, and orchestra performances. Featuring conductors Rafael Payare, Salvatore Percacciolo, and Fabio Luisi, program highlights include Ravel's L'heure Espagnole, Gounod's Romeo and Juliette, and the world premiere of Derrick Wang's Law \& Opera.",
+					venue: "Festival Theater",
+					city: "Castleton, VA",
+					map: "https://www.google.com/maps/d/u/0/viewer?ll=38.626125,-78.110089&t=h&source=embed&ie=UTF8&msa=0&spn=0.012573,0.013261&z=15&mid=z5uUp62E8U9Y.kOG6Cy0NPuFc",
+					date: "July 2-July 19",
+					tickets: "https://www.castletonfestival.org/schedule/month",
+					cost: "paid"
+				},
+				// END COPY EVENT
+				{
+					name: "San Francisco String Academy Faculty Chamber Concert",
+					link: "http://www.sfstringacademy.com/",
+					feature: "The SF String Academy's inaugural year includes a concert by its faculty.",
+					venue: "First Baptist Church",
+					city: "San Francisco, CA",
+					map: "https://www.google.com/maps/place/First+Baptist+Church+San+Francisco",
+					date: "Friday June 11 at 7pm",
+					tickets: "",
+					cost: "free"
+				},
+				{
+					name: "Recital for Flute and Harp",
+					link: "",
+					feature: "A unique opportunity to hear flute and harp chamber repertoire! Including works by Debussy, Piazzolla, Persichetti, and Ibert, this recital features young artists who study with flutist Alicia Unis.",
+					venue: "First United Methodist Church",
+					city: "Fremont, CA",
+					map: "https://www.google.com/maps/place/First+United+Methodist+Church",
+					date: "Sunday June 7 at 4:45pm",
+					tickets: "",
+					cost: "free"
+				},
+				{
+					name: "Kensington Symphony: Franck Symphony in d-minor",
+					link: "http://www.kensingtonsymphonyorchestra.org",
+					feature: "With Geoffrey Gallegos, conductor. ",
+					venue: "Unitarian Universalist Church of Berkeley",
+					city: "Berkeley, CA",
+					map: "https://www.google.com/maps/place/Unitarian+Universalist+Church+of+Berkeley",
+					date: "Saturday, June 6 at 8pm",
+					tickets: "http://www.kensingtonsymphonyorchestra.org/tickets.htm",
+					cost: "paid"
+				},
+				{
+					name: "California Youth Symphony: Season Finale Concerts",
+					link: "http://www.cys.org",
+					feature: "With Leo Eyler, conductor, and works featuring senior soloist competition winners Helen Wu, violin, Janice Gho, bass, Andrew Chang, violin, and Jonathan Lin, tuba. Along with Dvorak's boisterous Carnival Overture, the CYS also concludes their season with one of the most important and beloved works of the early 20th century: Ravel's Daphnis et Chloe.",
+					venue: "Flint Center",
+					city: "Cupertino, CA",
+					map: "https://www.google.com/maps/place/Flint+Center",
+					date: "Sunday May 17 at 2:30pm",
+					cost: "over"
+				},
+				{
+					name: "California Youth Symphony: Season Finale Concerts",
+					link: "http://www.cys.org",
+					feature: "With Leo Eyler, conductor, and works featuring senior soloist competition winners Helen Wu, violin, Janice Gho, bass, Andrew Chang, violin, and Jonathan Lin, tuba.  Along with Dvorak's boisterous Carnival Overture, the CYS also concludes their season with one of the most important and beloved works of the early 20th century: Ravel's Daphnis et Chloe.",
+					venue: "San Mateo Performing Arts Center",
+					city: "San Mateo, CA",
+					map: "https://www.google.com/maps/place/San+Mateo+Performing+Arts+Center",
+					date: "Sunday May 10 at 2:30pm",
+					cost: "over"
+				},
+				{
+					name: "University of California Davis Symphony Orchestra: Ariadnes Thread, Ecstasy, and Classicism",
+					link: "http://arts.ucdavis.edu/symphony-orchestra-concerts",
+					feature: "With Christian Baldini, conductor, and Alina Kobialka, violin.  Featuring works by Scriabin, Varese, and Beethoven.",
+					venue: "Jackson Hall, Mondavi Center",
+					city: "Davis, CA",
+					map: "https://www.google.com/maps/place/Mondavi+Center",
+					date: "Saturday, May 2 at 7pm",
+					tickets: "http://mondaviarts.org/events/event.cfm?event_id=1544&season=2014",
+					cost: "over"
+				},
+				{
+					name: "Camellia Symphony Orchestra: America, France, \& Russia Memorable Anniversaries",
+					link: "http://www.camelliasymphonyorchestra.org",
+					feature: "With Christian Baldini, conductor, \& Valentina Igoshina, piano.  Featuring works by Scriabin, Varese, and Tchaikovsky.",
+					venue: "Sacramento City College Performing Arts Center",
+					city: "Sacramento, CA",
+					map: "https://www.google.com/maps/place/Sacramento+City+College",
+					date: "Saturday, April 25 at 7:30pm",
+					tickets: "https://app.arts-people.com/index.php?ticketing=ca050",
+					cost: "over"
+				},
+				{
+					name: "Kensington Symphony Orchestra: Handel, Vivaldi, Walton, \& Vaughn Williams",
+					link: "http://www.kensingtonsymphonyorchestra.org",
+					feature: "With Geoffrey Gallegos, conductor, and the San Francisco Unitarian Choirs.",
+					venue: "Unitarian Universalist Church of Berkeley",
+					city: "Berkeley, CA",
+					map: "https://www.google.com/maps/place/Unitarian+Universalist+Church+of+Berkeley",
+					date: "Saturday, April 18 at 8pm",
+					tickets: "http://www.kensingtonsymphonyorchestra.org/tickets.htm",
+					cost: "over"
+				},
+				{
+					name: "Livermore-Amador Symphony: Copland, Devienne, Sibelius",
+					link: "http://livermoreamadorsymphony.org/aprilconcert.html",
+					feature: "Featuring Lara Webber, conductor \& the Bay Area's own flute beat-boxer, Annie Wu.",
+					venue: "Bankhead Theater",
+					city: "Livermore, CA",
+					map: "https://www.google.com/maps/place/Bankhead+Theater",
+					date: "Saturday, April 11 at 8pm",
+					tickets: "http://livermoreamadorsymphony.org/tickets.html",
+					cost: "over"
+				},
+				{
+					name: "West County Winds Concert",
+					link: "http://westcountywinds.org",
+					feature: "",
+					venue: "Knox Center for the Performing Arts",
+					city: "San Pablo, CA",
+					map: "https://www.google.com/maps/place/Contra+Costa+College",
+					date: "Sunday, March 15 at 3pm",
+					tickets: "",
+					cost: "over"
+				},
+				{
+					name: "Santa Cruz Symphony: Family Concert",
+					link: "http://santacruzsymphony.org/concerts-and-events/family-concert",
+					feature: "Featuring Prokofiev's timeless favorite for children, Peter and the Wolf.  Special guest collaborations with the Santa Cruz Ballet Theater, Santa Cruz County Youth Symphony, the Kuumbwa Honor Jazz Band and award-winning Shakespearean actor Paul Whitworth.",
+					venue: "Santa Cruz Civic Auditorium",
+					city: "Santa Cruz, CA",
+					map: "https://www.google.com/maps/place/Santa+Cruz+Civic+Auditorium",
+					date: "Sunday, March 1 at 2pm",
+					tickets: "https://www.santacruztickets.com/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=35967290-E12A-488D-B4C2-B20F98AA220E",
+					cost: "over"
+				},
+				{
+					name: "Santa Cruz Symphony: Family Concert",
+					link: "http://santacruzsymphony.org/concerts-and-events/family-concert",
+					feature: "Featuring Prokofiev's timeless favorite for children, Peter and the Wolf.  Special guest collaborations with the Santa Cruz Ballet Theater, Santa Cruz County Youth Symphony, the Kuumbwa Honor Jazz Band and award-winning Shakespearean actor Paul Whitworth.",
+					venue: "Santa Cruz Civic Auditorium",
+					city: "Santa Cruz, CA",
+					map: "https://www.google.com/maps/place/Santa+Cruz+Civic+Auditorium",
+					date: "Sunday, March 1 at 2pm",
+					tickets: "https://www.santacruztickets.com/Online/default.asp?doWork::WScontent::loadArticle=Load&BOparam::WScontent::loadArticle::article_id=35967290-E12A-488D-B4C2-B20F98AA220E",
+					cost: "over"
+				},
+				{
+					name: "Kensington Symphony: Horns A Plenty!",
+					link: "http://www.kensingtonsymphonyorchestra.org",
+					feature: "With Geoffrey Gallegos, conductor. Featuring works by Copland, Dukas, Strauss, and Hanson.",
+					venue: "Unitarian Universalist Church of Berkeley",
+					city: "Berkeley, CA",
+					map: "https://www.google.com/maps/place/Unitarian+Universalist+Church+of+Berkeley",
+					date: "Saturday, February 28 at 8pm",
+					tickets: "http://www.kensingtonsymphonyorchestra.org/tickets.htm",
+					cost: "over"
+				},
+			]};
+			var output = template(data);
+			document.getElementById("events-list").innerHTML = output;
+		</script>
+		<div class="event event-end">
+			<h3>For additional concert or booking inquiries, please <a href="/contact/">contact</a> Constance.</h3>
+		</div>
+	</div>
+
+	<footer id="bottom">
+		<div>Design by <a href="http://gabriellew.ee">Gabrielle Wee</a></div>
+		<div class="fb-like" data-href="https://facebook.com/constancekoo" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+		<div>Constance Koo &copy; 2015</div>
+	</footer>
+	<script src="/resources/scripts.js"></script>
+	<script src="/resources/slick/slick.min.js"></script>
+	<script src="/resources/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+	<script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
+	<script>
+		WebFont.load ({
+			google: {
+				families: ['Alegreya:400,700,400italic,700italic', 'Source Sans Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic']
+			}
+		});
+	</script>
+</body>
+</html>
